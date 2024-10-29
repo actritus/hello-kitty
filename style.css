@@ -1,19 +1,50 @@
+@import url('https://fonts.googleapis.com/css2?family=Mali&display=swap');
+
 h1 {
-    font-family: cursive;
-    font-size: xx-large;
+    font-family: 'Mali';
+    font-size: 60px;
+    color: deeppink;
+    text-align: center;
+    text-decoration: underline;
 }
 
 h2 {
-    font-family: curisve;
-    font-size: large;
+    font-family: "Mali";
+    font-size: 40px;
+    text-align: left;
+
 }
 p {
-    font-size: medium;
-    font-family: cursive;
-    color
+    font-size: 30px;
+    font-family: "Mali";
+    color: azure;
+    text-align: left;
+    size: 30px;
 
 }
 
 body {
     background-color: lightpink ;
+}
+
+button {
+    color: azure;
+    background-color: deeppink;
+    size: 30px;
+    font-size: 25px;
+    font-family: "Mali";
+}
+
+.image1 {
+    width: 15%;
+    position:absolute;
+    right: 290px;
+    top:0px
+}
+
+.image2 {
+    width: 15%;
+    position:absolute;
+    left: 290px;
+    top:0px
 }

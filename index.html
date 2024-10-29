@@ -1,39 +1,42 @@
 <head>
-    <title>Hello Kitty's Clothes</title>
+    <title>Hello Kitty's </title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1><em>Hello Kitty's Clothes</em></h1>
+    <h1><strong>Hello Kitty's Clothes</strong></h1>
 
     <h2>BMI Calculator</h2>
     <p>
         <label>
-          Weight: <input id="weightInput">
+          Weight: <input type="text" id="weight">
         </label>
       </p>
       <p>
         <label>
-          Height: <input id="heightInput">
-        </label>
-      </p>
-    <p>
-        <label>
-          Age: <input id="ageInput">
-        </label>
-      </p>
-      <p>
-        <label>
-          Gender: <select id="genderSelect">
-                        <option value="Female">Female</option>
-                        <option value="Male">Male</option>
-                        <option value="Other">Other</option>
-                    </select>
+          Height: <input type="text" id="height">
         </label>
       </p>
 
     <button id="calculate">
         Calculate BMI
     </button>
+
+    <div id="result"></div>
+
+    <script>
+        function calculateBMI() {
+          const weight = parseFloat(document.getElementById("weight").value);
+          const height = parseFloat(document.getElementById("height").value) / 100;
+          const bmi = weight / (height * height);
+          document.getElementById("result").innerText = `Your BMI is ${bmi.toFixed(2)}`;
+        }
+        
+        document.getElementById("calculate").onclick = calculateBMI;
+  
+    </script>
+    <img src="kitty icon.png" alt="kitty icon" class="image1">
+    <img src="kitty icon1.png" alt="kitty1 icon" class="image2">
+
 
 
 </body>
