@@ -1,6 +1,7 @@
 <head>
-    <title>Hello Kitty's </title>
+    <title>Hello Kitty's CLothes</title>
     <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
 </head>
 <body>
     <h1><strong>Hello Kitty's Clothes</strong></h1>
@@ -21,22 +22,47 @@
         Calculate BMI
     </button>
 
-    <div id="result"></div>
+    <div id="result" class="result"></div>
 
-    <script>
-        function calculateBMI() {
-          const weight = parseFloat(document.getElementById("weight").value);
-          const height = parseFloat(document.getElementById("height").value) / 100;
-          const bmi = weight / (height * height);
-          document.getElementById("result").innerText = `Your BMI is ${bmi.toFixed(2)}`;
-        }
-        
-        document.getElementById("calculate").onclick = calculateBMI;
-  
-    </script>
+    <div class="bmi-scale">
+      <div class="bmi-range underweight">Underweight</div>
+      <div class="bmi-range normal">Normal</div>
+      <div class="bmi-range overweight">Overweight</div>
+      <div class="bmi-range obese">Obese</div>
+      <div class="bmi-pointer" id="bmi-pointer"></div>
+  </div>
+
     <img src="kitty icon.png" alt="kitty icon" class="image1">
     <img src="kitty icon1.png" alt="kitty1 icon" class="image2">
 
+    <div id="popup" class="popup-display">
+      <div class="popup-content"></div>
+        <h2>Are you happy with your BMI?</h2>
+        <p>Please select:</p>
+        <div class="popup-options">
+          <button id="yesButton">Yes</button>
+          <button id="noButton">No</button>
+        </div>
+      </div>
 
+    <div id="congrats" class="endscreen">
+      <h2>Hooray! Happy to hear you're confident!</h2>
+      <button id="returntomain" class="cancel">Cancel</button>
+    </div>
+
+    <div id="unhappy" class="no">
+      <h2>It's okay!</h2>
+      <p>It's best to consult a healthcare professional in order to get to your desired BMI.</p>
+    </div>
+
+    <button id="exercise" class="exercise">
+      Exercise
+    </button>
+
+    <div class="animate" id="running">
+      <img src="run1.png" alt="run1" class="run-image">
+      <img src="run2.png" alt="run2" class="run-image">
+      <img src="run3.png" alt="run3" class="run-image">
+    </div>
 
 </body>

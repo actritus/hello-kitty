@@ -48,3 +48,150 @@ button {
     left: 290px;
     top:0px
 }
+
+.result {
+    font-family: "Mali";
+    size: 20px;
+    font-size: 20px;
+    color:palevioletred;
+    position: absolute;
+    padding-top: 50px;
+    
+}
+
+.bmi-scale {
+    position: relative;
+    width: 20%;
+    bottom: -100px;
+    height: 30px;
+    display: flex;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.bmi-range {
+    flex: 1;
+    text-align: center;
+    line-height: 30px;
+    font-size: 0.9em;
+    color: white;
+}
+
+.underweight {
+    background-color: #FF007F; /* Light blue */
+}
+
+.normal {
+    background-color: #FC6C85; /* Light green */
+}
+
+.overweight {
+    background-color: #FC8EAC; /* Gold */
+}
+
+.obese {
+    background-color: #FFC1CC; /* Tomato */
+}
+
+.bmi-pointer {
+    position: absolute;
+    top: -5px;
+    width: 10px;
+    height: 40px;
+    background-color: black; /* Pointer color */
+    border-radius: 2px;
+    transition: left 0.6s ease; /* Smooth animation for pointer */
+    left: 0; /* Initial position */
+}
+
+.exercise {
+    position: absolute;
+    right: 50px;
+    background-color: deeppink;
+    size: 30px;
+    font-size: 25px;
+    font-family: "Mali";
+    top: 150px;
+}
+.animate {
+    width: 300px;
+    height: 300px;
+    position: relative;
+}
+
+.run-image {
+    width: 100%;
+    height: 100%;
+    left: 800px;
+    bottom: 300px;
+    position: absolute;
+    opacity: 0; /* Start with each image hidden */
+    visibility: hidden;
+}
+
+/* Define the animation */
+.play-animation .run-image {
+    animation: gifAnimation 1.5s infinite;
+}
+
+.run-image:nth-child(1) {
+    animation-delay: 0s;
+}
+
+.run-image:nth-child(2) {
+    animation-delay: 0.5s;
+}
+
+.run-image:nth-child(3) {
+    animation-delay: 1s;
+}
+
+@keyframes gifAnimation {
+    0%, 33.33% {
+        opacity: 1;
+        visibility: visible;
+    }
+    33.34%, 100% {
+        opacity: 0;
+        visibility: hidden;
+    }
+}
+
+.popup-display{
+    display: none;
+    position: absolute;
+    left: 300px;
+    top: 200px;
+    justify-content: center;
+    background-color: aliceblue;
+    font-family: "Mali";
+}
+
+.popup-content {
+    padding: 20px;
+    border-radius: 5px;
+    text-align: center;
+    position: relative;
+    font-family: "Mali";
+
+}
+
+.popup-options {
+    color: azure;
+    background-color: deeppink;
+    size: 10px;
+    font-size: 25px;
+    font-family: "Mali";
+}
+
+.endscreen {
+    display: none;
+    background-color: aliceblue;
+    border: 50px;
+    border-color: coral;
+    text-align: center;
+    width: 50%;
+    position: absolute;
+    bottom: 400px;
+    right: 300px;
+}
