@@ -1,68 +1,127 @@
 <head>
-    <title>Hello Kitty's CLothes</title>
-    <link rel="stylesheet" href="style.css">
-    <script src="script.js" defer></script>
+    <title>Hello Kitty's Healthy Habits</title> <!--Title of the page-->
+    <link rel="stylesheet" href="style.css"> <!--Link to CSS-->
+    <script src="script.js" defer></script> <!--Link to Javascript-->
 </head>
 <body>
-    <h1><strong>Hello Kitty's Clothes</strong></h1>
-
-    <h2>BMI Calculator</h2>
-    <p>
-        <label>
-          Weight: <input type="text" id="weight">
-        </label>
-      </p>
+    <h1><strong>Hello Kitty's Healthy Habits</strong></h1> <!--Title-->
+  <div id="wrapper"  class="wrapper"> <!--Wraps contents of BMI calculator into a container-->
+      <h2>BMI Calculator</h2>
       <p>
-        <label>
-          Height: <input type="text" id="height">
-        </label>
-      </p>
+          <label>
+            Weight: <input type="text" id="weight"> <!--Weight input-->
+          </label>
+        </p>
+        <p>
+          <label>
+            Height: <input type="text" id="height"> <!--Height input-->
+          </label>
+        </p>
 
-    <button id="calculate">
-        Calculate BMI
-    </button>
+      <button id="calculate">
+          Calculate BMI <!--Button to calculate BMI-->
+      </button>
 
-    <div id="result" class="result"></div>
+      <div id="result" class="result"></div> <!--Displays the result-->
+  </div>
 
-    <div class="bmi-scale">
+    <div class="bmi-scale"> <!--BMI Visual Scale-->
       <div class="bmi-range underweight">Underweight</div>
       <div class="bmi-range normal">Normal</div>
       <div class="bmi-range overweight">Overweight</div>
       <div class="bmi-range obese">Obese</div>
-      <div class="bmi-pointer" id="bmi-pointer"></div>
-  </div>
+      <div class="bmi-pointer" id="bmi-pointer"></div> <!--Pointer which moves to the correct range when BMI is calculated-->
+    </div>
 
-    <img src="kitty icon.png" alt="kitty icon" class="image1">
+    <div id="information-container">
+      <p class="information">
+        Body Mass Index scores or BMI scores indicate whether a person's weight is in a healthy range for their height, but it's essential to interpret the results with caution.
+      
+        A BMI score categorises individuals into underweight (less than 18.5), normal weight (18.5-24.9), overweight (25-29.9), and obese (30 or higher). While BMI doesn't directly measure body fat or health, research suggests that being in the normal weight range is associated with lower risks of chronic diseases, such as heart disease, diabetes, and certain cancers. 
+                
+        If your BMI is low, consider consulting a healthcare professional or registered dietitian to develop a weight gain plan focusing on nutrient-dense foods. Conversely, if your BMI is high, aim to lose weight through sustainable lifestyle changes, including a balanced diet and regular physical activity. 
+                
+        The World Health Organization recommends adults strive for at least 150 minutes of moderate-intensity exercise or 75 minutes of vigorous-intensity exercise per week. 
+      </p>
+    </div> <!--Information regarding the BMI scale-->
+
+    <img src="kitty icon.png" alt="kitty icon" class="image1"> <!--Images of Hello Kitty placed beside the heading-->
     <img src="kitty icon1.png" alt="kitty1 icon" class="image2">
 
-    <div id="popup" class="popup-display">
+    <div id="popup" class="popup-display"> <!--Popup that appears when BMI is calculated-->
       <div class="popup-content"></div>
         <h2>Are you happy with your BMI?</h2>
-        <p>Please select:</p>
         <div class="popup-options">
           <button id="yesButton">Yes</button>
           <button id="noButton">No</button>
         </div>
-      </div>
+    </div>
 
-    <div id="congrats" class="endscreen">
+    <div id="congrats" class="endscreen"> <!--Response if the user is happy with their calculated BMI-->
       <h2>Hooray! Happy to hear you're confident!</h2>
-      <button id="returntomain" class="cancel">Cancel</button>
+      <button id="returntomain" class="cancel">Cancel</button> <!--Button that exits out of the popup-->
     </div>
 
-    <div id="unhappy" class="no">
+    <div id="unhappy" class="no"> <!--Response if the user is unhappy with their calculated BMI-->
       <h2>It's okay!</h2>
-      <p>It's best to consult a healthcare professional in order to get to your desired BMI.</p>
+      <p class="no-content">It's best to consult a healthcare professional in order to get to your desired BMI. Otherwise, you can test the simulation above.</p>
+      <button id="returntomain1" class="cancel">Cancel</button> <!--Button that exits out of the popup-->
     </div>
 
-    <button id="exercise" class="exercise">
+    <button id="exercise" class="exercise"> <!--Exercise button that appears if the user is unhappy-->
       Exercise
     </button>
-
-    <div class="animate" id="running">
+    <div class="animate" id="running"> <!--Hello Kitty animated drawings-->
       <img src="run1.png" alt="run1" class="run-image">
       <img src="run2.png" alt="run2" class="run-image">
       <img src="run3.png" alt="run3" class="run-image">
     </div>
 
+    <div id="exercise-calculations" class="exercise-calculations"> <!--Calculations for amount of calories burnt-->
+      <p>
+        <label>
+          Weight: <input type="text" id="current-weight">
+        </label>
+        <label>
+          MET: <input type="text" id="MET"> <!--User inputs Metabolic Equivalent-->
+        </label>
+      </p>
+      <button id="calculateCalories" class="calories">
+        Calculate calories
+      </button> <!--Button that calculates calories burnt-->
+      <button id="button-return" class="cancel1">
+        Cancel
+      </button> <!--Option to exit out-->
+    </div>
+
+    <div id="calories-result" class="calories-result"></div> <!--Shows calories burnt-->
+
+    <button id="eat-button" class="eat-button"> 
+      Eat
+    </button> <!--Button that shows amount eaten-->
+
+    <div class="animate" id="eating"> <!--Animation of Hello Kitty eating-->
+      <img src="eat.png" alt="eat" class="eat-image">
+      <img src="eat1.png" alt="run2" class="eat-image">
+      <img src="eat2.png" alt="run3" class="eat-image">
+    </div>
+
+    <div id="food-calculations" class="food-calculations"> <!--Calculations of the total amount of calories in macronutrients-->
+      <p>
+        <label>
+          Carbs: <input type="text" id="carbohydrates">
+        </label>
+        <label>
+          Fats: <input type="text" id="fats">
+        </label>
+        <label>
+          Protein: <input type="text" id="protein">
+        </label>
+      </p>
+      <button id="calculateCalories1" class="calories1"> <!--Button that the user presses in order to view the total number of calories-->
+        Calculate calories
+      </button>
+      <button id="button-return1" class="cancel1">
+        Cancel
+      </button> <!--Button to opt out of the current simulation-->
 </body>

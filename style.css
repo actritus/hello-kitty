@@ -17,7 +17,7 @@ h2 {
 p {
     font-size: 30px;
     font-family: "Mali";
-    color: azure;
+    color: rgb(255, 43, 188);
     text-align: left;
     size: 30px;
 
@@ -30,7 +30,6 @@ body {
 button {
     color: azure;
     background-color: deeppink;
-    size: 30px;
     font-size: 25px;
     font-family: "Mali";
 }
@@ -38,14 +37,14 @@ button {
 .image1 {
     width: 15%;
     position:absolute;
-    right: 290px;
+    right: 180px;
     top:0px
 }
 
 .image2 {
     width: 15%;
     position:absolute;
-    left: 290px;
+    left: 180px;
     top:0px
 }
 
@@ -78,19 +77,23 @@ button {
 }
 
 .underweight {
-    background-color: #FF007F; /* Light blue */
+    background-color: #FF007F;
+    font-family: "Mali";
 }
 
 .normal {
-    background-color: #FC6C85; /* Light green */
+    background-color: #FC6C85; 
+    font-family: "Mali";
 }
 
 .overweight {
-    background-color: #FC8EAC; /* Gold */
+    background-color: #FC8EAC;
+    font-family: "Mali";
 }
 
 .obese {
-    background-color: #FFC1CC; /* Tomato */
+    background-color: #FFC1CC;
+    font-family: "Mali";
 }
 
 .bmi-pointer {
@@ -105,14 +108,15 @@ button {
 }
 
 .exercise {
+    display: none;
     position: absolute;
     right: 50px;
     background-color: deeppink;
-    size: 30px;
     font-size: 25px;
     font-family: "Mali";
     top: 150px;
 }
+
 .animate {
     width: 300px;
     height: 300px;
@@ -157,6 +161,10 @@ button {
     }
 }
 
+.pause-exercise .run-image {
+    animation-play-state: paused;
+}
+
 .popup-display{
     display: none;
     position: absolute;
@@ -179,7 +187,6 @@ button {
 .popup-options {
     color: azure;
     background-color: deeppink;
-    size: 10px;
     font-size: 25px;
     font-family: "Mali";
 }
@@ -187,11 +194,194 @@ button {
 .endscreen {
     display: none;
     background-color: aliceblue;
-    border: 50px;
+    border-radius: 30px;
     border-color: coral;
     text-align: center;
     width: 50%;
     position: absolute;
     bottom: 400px;
     right: 300px;
+}
+
+.no {
+    display: none;
+    color: black;
+    font-size: 10px;
+    font-family: "Mali";
+    background-color: aliceblue;
+    width: 50%;
+    position: absolute;
+    bottom: 400px;
+    right: 300px;
+}
+
+.no-content {
+
+    color: black;
+    font-size: 20px;
+    font-family: "Mali";
+    position: relative;
+}
+
+.wrapper {
+    margin-left: 20px;
+    background: rgb(255, 248, 225);
+    width: 20%;
+    border-radius: 20px;
+    box-shadow:0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.exercise-calculations {
+    font-size: 20px;
+    font-family: "Mali";
+    color: rgb(255, 43, 188);
+    text-align: left;
+    display: none;
+    position: absolute;
+    top: 380px;
+    right: 370px;
+}
+
+.calories-result {
+    font-size: 20px;
+    font-family: "Mali";
+    position: absolute;
+    top: 150px;
+    right: 200px;
+}
+
+.calories {
+    width: 30%;
+    font-size: 20px;
+    height: 60%;
+    position: absolute;
+    right: -200px;
+    top: 30px;
+}
+
+.cancel1 {
+    font-size: 20px;
+    height: 30%;
+    position: absolute;
+    right: -150px;
+    top: -50px;
+    text-align: center;
+}
+
+.eat-button {
+    display: none;
+    position: absolute;
+    right: 50px;
+    background-color: deeppink;
+    font-size: 25px;
+    font-family: "Mali";
+    top: 100px;
+}
+
+.eat-image {
+    width: 80%;
+    height: 80%;
+    left: 800px;
+    bottom: 300px;
+    position: absolute;
+    opacity: 0; /* Start with each image hidden */
+    visibility: hidden;
+}
+
+/* Define the animation */
+.play-animation .eat-image {
+    animation: gifAnimation 1.5s infinite;
+}
+
+.eat-image:nth-child(1) {
+    animation-delay: 0s;
+}
+
+.eat-image:nth-child(2) {
+    animation-delay: 0.5s;
+}
+
+.eat-image:nth-child(3) {
+    animation-delay: 1s;
+}
+
+@keyframes gifAnimation {
+    0%, 33.33% {
+        opacity: 1;
+        visibility: visible;
+    }
+    33.34%, 100% {
+        opacity: 0;
+        visibility: hidden;
+    }
+}
+
+.pause-eating .eat-image {
+    animation-play-state: paused;
+}
+
+.exercise-calculations {
+    font-size: 20px;
+    font-family: "Mali";
+    color: rgb(255, 43, 188);
+    text-align: left;
+    display: none;
+    position: absolute;
+    top: 380px;
+    right: 370px;
+}
+
+.calories-result {
+    font-size: 20px;
+    font-family: "Mali";
+    position: absolute;
+    top: 150px;
+    right: 200px;
+}
+
+.calories1 {
+    width: 20%;
+    font-size: 20px;
+    height: 60%;
+    position: absolute;
+    right: -200px;
+    top: 30px;
+}
+
+.cancel1 {
+    font-size: 20px;
+    height: 30%;
+    position: absolute;
+    right: -150px;
+    top: -50px;
+    text-align: center;
+}
+
+.food-calculations {
+    font-size: 20px;
+    font-family: "Mali";
+    color: rgb(255, 43, 188);
+    text-align: left;
+    display: none;
+    position: absolute;
+    top: 380px;
+    right: 230px;
+}
+
+.information-container {
+    margin-top: 50px; /* Space above to separate it from animations */
+    padding-bottom: 20px; /* Extra padding below for stability */
+    position: absolute; /* Keeps content flow intact */
+}
+
+.information {
+    position: absolute;
+    top: 500px; /* Adjust this value for the desired distance from the bottom */
+    right: 50px;   /* Adjust as needed */
+    max-width: 1000px; /* Optional: limit the width for better readability */
+    background-color: white; /* Optional: add a background for readability */
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    font-size: 20px;
 }
